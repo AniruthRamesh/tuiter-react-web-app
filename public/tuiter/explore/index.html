@@ -1,83 +1,485 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-              rel="stylesheet"/>
-        <link href="index.css" rel="stylesheet"/>
-    </head>
-    <body>
-    <div class="wd-main-container">
-        <div class = "wd-search-tuiter">
-            <i class="fas fa-magnifying-glass" style="color: lightgray" id="wd-searchImage"></i>
-            <input class ="wd-text-box-searchTuiter" type="text" placeholder="Search Tuiter">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container mt-2">
+      <div class="row">
+        <div
+          class="col d-none d-sm-block col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2 fixing-position-explorebar"
+        >
+          <div class="list-group">
+            <i class="fa-brands fa-twitter list-group-item"></i>
+            <span class="list-group-item">
+              <i class="fa-solid fa-house"></i>
+              <span class="d-none d-xl-inline">Home</span>
+            </span>
 
-            <a href="../explore-settings.html"><i class="fas fa-cog fa-l" style="color: lightskyblue"
-                                                  id="wd-settingsImage"></i></a>
+            <span class="list-group-item active">
+              <i class="fa-solid fa-hashtag"></i>
+              <span class="d-none d-xl-inline">Explore</span>
+            </span>
+
+            <span class="list-group-item">
+              <i class="fa-solid fa-bell"></i>
+              <span class="d-none d-xl-inline">Notifications</span>
+            </span>
+
+            <span class="list-group-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span class="d-none d-xl-inline">Messages</span>
+            </span>
+
+            <span class="list-group-item">
+              <i class="fa-solid fa-bookmark"></i>
+              <span class="d-none d-xl-inline">Bookmarks</span>
+            </span>
+
+            <span class="list-group-item">
+              <i class="fa-solid fa-list"></i>
+              <span class="d-none d-xl-inline">Lists</span>
+            </span>
+
+            <span class="list-group-item">
+              <i class="fa-solid fa-user"></i>
+              <span class="d-none d-xl-inline">Profile</span>
+            </span>
+
+            <span class="list-group-item">
+              <i class="fa-solid fa-dice-three"></i>
+              <span class="d-none d-xl-inline">More</span>
+            </span>
+          </div>
+          <span
+            class="badge rounded-pill text-bg-primary p-3 float-end mt-2 w-100"
+            >Tuit</span
+          >
         </div>
-        <div class = "wd-navigation">
-            <a href="navigation/forYou.html" class="highlighted">For you</a>
-            <a href="navigation/trending.html" class="wd-navigation-text">Trending</a>
-            <a href="navigation/covid-19.html" class="wd-navigation-text">LIVE</a>
-            <a href="navigation/news.html" class="wd-navigation-text">News</a>
-            <a href="navigation/sports.html" class="wd-navigation-text">Sports</a>
-            <a href="navigation/entertainment.html" class="wd-navigation-text">Entertainment</a>
+        <div
+          class="col col-sm-10 col-md-10 col-lg-7 col-xl-6 col-xxl-7 position-relative center-bar"
+        >
+          <span class="position-relative">
+            <i
+              class="fas fa-magnifying-glass fa-1x ms-3"
+              style="
+                color: black;
+                position: absolute;
+                margin-top: 0.6rem;
+                font-size: 18px;
+              "
+              id="wd-searchImage"
+            ></i>
+            <input
+              type="text"
+              class="form-control rounded-5 m-0 d-inline"
+              placeholder="Search Tuiter"
+              style="width: 90%"
+            />
+            <a href="../explore-settings.html"
+              ><i class="fas fa-cog fa-2xl" id="wd-settingsImage"></i
+            ></a>
+          </span>
+
+          <ul class="nav nav-tabs mt-2">
+            <li class="nav-item">
+              <a class="nav-link active" href="navigation/for-you.html"
+                >For you</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="navigation/trending.html">Trending</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="navigation/news.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="navigation/sports.html">Sports</a>
+            </li>
+            <li class="nav-item d-none d-md-block">
+              <a class="nav-link" href="navigation/entertainment.html"
+                >Entertainment</a
+              >
+            </li>
+          </ul>
+
+          <div class="position-relative mt-2">
+            <img
+              src="Starship-Mk1-Day.jpg"
+              class="img-fluid"
+              alt="Your Image"
+            />
+            <div class="container position-relative">
+              <h1
+                style="
+                  color: white;
+                  position: absolute;
+                  bottom: 1.2rem;
+                  padding-right: 1.25rem;
+                "
+              >
+                SpaceX's Starship
+              </h1>
+            </div>
+          </div>
+
+          <ul class="list-group mb-3">
+            <li class="list-group-item position-relative">
+              <span class="text-secondary">Web Development</span>
+              <br />
+              <div class="d-inline position-relative float-end"><img src="react.png" style="width:100px; 
+              margin-top:-1.25rem; "></div>
+              <span class="fw-bold">ReactJS 
+                <span
+                class="fa-stack" style="width:3%" >
+                <i
+                  class="fa-solid fa-circle fa-stack-1x"
+                  style="color: black; font-size: 14px"
+                ></i><i
+                class="fa-solid fa-check fa-stack-1x fa-inverse"
+                style="font-size: 9px"
+              ></i></span>
+                 <span class="text-secondary fw-normal">- 2h</span>
+              <br />
+              <div class=" d-inline">
+                React.js is a component based front end library that makes it
+                very easy to build Single Page Applications or SAPs
+              </div>
+            </li>
+            <li class="list-group-item position-relative">
+                <span class="fw-bold">Javascript 
+                    <div class="d-inline position-relative float-end"><img src="js.png" style="width:100px; 
+                        margin-top:-.1rem; border-radius: 1.5rem;"></div>
+                    <span
+                    class="fa-stack" style="width:3%" >
+                    <i
+                      class="fa-solid fa-circle fa-stack-1x"
+                      style="color: black; font-size: 14px"
+                    ></i><i
+                    class="fa-solid fa-check fa-stack-1x fa-inverse"
+                    style="font-size: 9px"
+                  ></i></span>
+                     <span class="text-secondary fw-normal">- 2h</span>
+                     <br>
+                     <div class="d-inline">
+                        Javascript is a programming language that can run on
+                        browsers as well as desktops
+                      </div>
+                      <br>
+                      <span class="text-secondary fw-normal">123K Tuits</span>
+                    </span>
+            </li>
+            <li class="list-group-item">
+            <span class="text-secondary">Web Development</span>
+            <div class="d-inline position-relative float-end"><img src="jquery.png" style="width:100px; 
+                margin-top:-.1rem; border-radius: 1.5rem;"></div>
+              <br />
+              <span class="fw-bold">jQuery</span>
+              <br>
+              <span class="text-secondary">123K Tuits</span>
+
+            </li>
+            <li class="list-group-item">
+                <span class="text-secondary">Web Development</span>
+              <br />
+              <span class="fw-bold">NodeJS 
+                <div class="d-inline position-relative float-end"><img src="node-js.jpg" style="width:100px; 
+                    margin-top:-1.25rem; border-radius: 1.5rem;"></div>
+                <span
+                class="fa-stack" style="width:3%" >
+                <i
+                  class="fa-solid fa-circle fa-stack-1x"
+                  style="color: black; font-size: 14px"
+                ></i><i
+                class="fa-solid fa-check fa-stack-1x fa-inverse"
+                style="font-size: 9px"
+              ></i></span>
+                 <span class="text-secondary fw-normal">- 2h</span>
+                 <br>
+              <span class="text-secondary fw-normal">123K Tuits</span>
+            </li>
+          </ul>
+
+          <!---->
         </div>
-        <div class="wd-border-for-hightlighted"></div>
 
-        <div class ="wd-box">
+        <div
+          class="col d-none d-sm-none d-lg-block col-lg-4 col-xl-4 col-xxl-3"
+        >
+          <div class="list-group">
+            <div class="list-group-item fw-bold">Who to follow</div>
+
+            <div class="list-group-item position-relative">
+              <span class="position-relative">
+                <img src="java.png" style="width: 45px; height: 45px" />
+              </span>
+              <div class="d-inline">
+                <p
+                  class="d-inline fw-bold"
+                  style="
+                    position: absolute;
+                    margin-top: -5px;
+                    margin-left: 12px;
+                  "
+                >
+                  Java
+                </p>
+                <p
+                  class="d-inline"
+                  style="
+                    position: absolute;
+                    margin-top: 19px;
+                    margin-left: 10px;
+                  "
+                >
+                  @Java
+                </p>
+
+                <span
+                  class="fa-stack"
+                  style="
+                    position: absolute;
+                    margin-left: 38px;
+                    margin-top: -7px;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-circle fa-stack-1x"
+                    style="color: black; font-size: 14px"
+                  ></i>
+                  <i
+                    class="fa-solid fa-check fa-stack-1x fa-inverse"
+                    style="font-size: 9px"
+                  ></i>
+                </span>
+
+                <span
+                  class="badge rounded-pill text-bg-primary p-2 float-end mt-2"
+                  >Follow</span
+                >
+              </div>
+            </div>
+
+            <div class="list-group-item">
+              <span>
+                <img
+                  src="relativity.jpg"
+                  style="width: 45px; height: 45px; border-radius: 20px"
+                />
+                <p
+                  class="d-inline fw-bold"
+                  style="
+                    position: absolute;
+                    margin-top: -5px;
+                    margin-left: 12px;
+                  "
+                >
+                  Relativity Space
+                </p>
+                <p
+                  class="d-inline"
+                  style="
+                    position: absolute;
+                    margin-top: 19px;
+                    margin-left: 10px;
+                  "
+                >
+                  @relativityspace
+                </p>
+
+                <span
+                  class="fa-stack"
+                  style="
+                    position: absolute;
+                    margin-left: 122px;
+                    margin-top: -7px;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-circle fa-stack-1x"
+                    style="color: black; font-size: 14px"
+                  ></i>
+                  <i
+                    class="fa-solid fa-check fa-stack-1x fa-inverse"
+                    style="font-size: 9px"
+                  ></i>
+                </span>
+
+                <span
+                  class="badge rounded-pill text-bg-primary p-2 float-end mt-2"
+                  >Follow</span
+                >
+              </span>
+            </div>
+
+            <div class="list-group-item">
+              <span>
+                <img
+                  src="virgin.svg"
+                  style="width: 45px; height: 45px; border-radius: 20px"
+                />
+                <p
+                  class="d-inline fw-bold"
+                  style="
+                    position: absolute;
+                    margin-top: -5px;
+                    margin-left: 12px;
+                  "
+                >
+                  Virgin Galactic
+                </p>
+                <p
+                  class="d-inline"
+                  style="
+                    position: absolute;
+                    margin-top: 19px;
+                    margin-left: 10px;
+                  "
+                >
+                  @virgingalactic
+                </p>
+
+                <span
+                  class="fa-stack"
+                  style="
+                    position: absolute;
+                    margin-left: 113px;
+                    margin-top: -7px;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-circle fa-stack-1x"
+                    style="color: black; font-size: 14px"
+                  ></i>
+                  <i
+                    class="fa-solid fa-check fa-stack-1x fa-inverse"
+                    style="font-size: 9px"
+                  ></i>
+                </span>
+
+                <span
+                  class="badge rounded-pill text-bg-primary p-2 float-end mt-2"
+                  >Follow</span
+                >
+              </span>
+            </div>
+
+            <div class="list-group-item">
+              <span>
+                <img
+                  src="NASAmain.png"
+                  style="width: 45px; height: 45px; border-radius: 20px"
+                />
+                <p
+                  class="d-inline fw-bold"
+                  style="
+                    position: absolute;
+                    margin-top: -5px;
+                    margin-left: 12px;
+                  "
+                >
+                  NASA
+                </p>
+                <p
+                  class="d-inline"
+                  style="
+                    position: absolute;
+                    margin-top: 19px;
+                    margin-left: 10px;
+                  "
+                >
+                  @NASA
+                </p>
+
+                <span
+                  class="fa-stack"
+                  style="
+                    position: absolute;
+                    margin-left: 48px;
+                    margin-top: -7px;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-circle fa-stack-1x"
+                    style="color: black; font-size: 14px"
+                  ></i>
+                  <i
+                    class="fa-solid fa-check fa-stack-1x fa-inverse"
+                    style="font-size: 9px"
+                  ></i>
+                </span>
+
+                <span
+                  class="badge rounded-pill text-bg-primary p-2 float-end mt-2"
+                  >Follow</span
+                >
+              </span>
+            </div>
+
+            <div class="list-group-item">
+              <span>
+                <img
+                  src="Tesla_T_symbol.png"
+                  style="width: 45px; height: 45px; border-radius: 20px"
+                />
+                <p
+                  class="d-inline fw-bold"
+                  style="
+                    position: absolute;
+                    margin-top: -5px;
+                    margin-left: 12px;
+                  "
+                >
+                  Tesla
+                </p>
+                <p
+                  class="d-inline"
+                  style="
+                    position: absolute;
+                    margin-top: 19px;
+                    margin-left: 10px;
+                  "
+                >
+                  @Tesla
+                </p>
+
+                <span
+                  class="fa-stack"
+                  style="
+                    position: absolute;
+                    margin-left: 42px;
+                    margin-top: -7px;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-circle fa-stack-1x"
+                    style="color: black; font-size: 14px"
+                  ></i>
+                  <i
+                    class="fa-solid fa-check fa-stack-1x fa-inverse"
+                    style="font-size: 9px"
+                  ></i>
+                </span>
+
+                <span
+                  class="badge rounded-pill text-bg-primary p-2 float-end mt-2"
+                  >Follow</span
+                >
+              </span>
+            </div>
+
+            <!---->
+          </div>
         </div>
-
-        <div class ="wd-post6">
-            <p class = "wd-post6-dots">...</p>
-            <p class="wd-post6-topic">Trending in Hollywood</p>
-            <p class="wd-post6-title">Zendaya</p>
-            <p class="wd-post6-numbers">60.8k Tuits</p>
-        </div>
-
-        <div class ="wd-post1">
-            <p class = "wd-post1-dots">...</p>
-            <p class="wd-post1-topic">Trending in HipHop</p>
-            <p class="wd-post1-title">Lil Uzi Vert</p>
-            <p class="wd-post1-numbers">69.6k Tuits</p>
-        </div>
-
-        <div class="wd-border-after-content wd-first"></div>
-
-        <div class ="wd-post3">
-            <i class="fab fa-apple" style="color: grey" id="wd-appleLogo"></i>
-            <p class = "wd-post3-publisher">Apple</p>
-            <img src = "tick.png" id="wd-tick-logo">
-            <p class = "wd-post3-postedTimings"> . Yesterday</p>
-            <p class = "wd-post3-title">Apple acquires Beats for $3 Billion</p>
-            <img src ="applebeats.jpg" id="wd-newsImage">
-        </div>
-        <div class="wd-border-after-content wd-second"></div>
-
-        <div class = "wd-post4">
-            <p class = "wd-post4-topic">COVID-19</p>
-            <p class="wd-post4-publishedTime">. LIVE</p>
-            <p class="wd-post4-title">COVID-19 News and updates for Massachusetts</p>
-            <img src="vaccine.png" id="wd-covid">
-        </div>
-        <div class="wd-border-after-content wd-third"></div>
-
-        <div class="wd-post5">
-            <img src="NEU.png" id="wd-neu-Logo">
-            <p class="wd-post5-publisher">Northeastern University</p>
-            <img src = "tick.png" id="wd-tick-logo1">
-            <p class="wd-post5-postedTimings">. Yesterday</p>
-            <p class="wd-post5-title">Huskies are back for another Spring term</p>
-            <img src="neuPeople.png" id="wd-neuPeople">
-        </div>
-        <div class="wd-border-after-content wd-fourth"></div>
-
-        <div class = "wd-post7">
-            <p class = "wd-post7-topic">Jujutsu Kaisen</p>
-            <p class="wd-post7-publishedTime">. Trending</p>
-            <p class="wd-post7-title">#Maki</p>
-            <img src="maki.png" id="wd-covid1">
-        </div>
-
+      </div>
     </div>
-    </body>
+  </body>
 </html>
