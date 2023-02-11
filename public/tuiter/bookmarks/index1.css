@@ -1,0 +1,13 @@
+.wd-images{
+    width: 45px;
+    height: 45px;
+    border-radius: 24px;
+    margin-top: 12px;
+    margin-left: 16px;
+}
+
+.wd-changeMargin{
+    margin-left: 68px;
+    margin-top: -20px;
+    width:80%
+}
