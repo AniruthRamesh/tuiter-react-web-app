@@ -1,0 +1,56 @@
+[
+    {
+        "_id":1,
+        "page":"Home",
+        "icon":"bi bi-house-door-fill",
+        "link":"/tuiter/home"
+    },
+    {
+        "_id":2,
+        "page":"Explore",
+        "icon":"bi bi-hash",
+        "link":"/tuiter/explore"
+    },
+    {
+        "_id":3,
+        "page":"Notifications",
+        "icon":"bi bi-bell-fill"
+    },
+    {
+        "_id":4,
+        "page":"Message",
+        "icon":"bi bi-envelope-fill"
+    },
+    {
+        "_id":5,
+        "page":"Bookmark",
+        "icon":"bi bi-bookmark-fill"
+    },
+    {
+        "_id":6,
+        "page":"List",
+        "icon":"bi bi-list-ul"
+    },
+    {
+        "_id":7,
+        "page":"Profile",
+        "icon":"bi bi-person-fill"
+    },
+    {
+        "_id":8,
+        "page":"More",
+        "icon":"bi bi-three-dots"
+    },
+    {
+        "_id":9,
+        "page":"Labs",
+        "icon":"bi bi-hospital-fill",
+        "link":"/"
+    },
+    {
+        "_id":10,
+        "page":"Hello",
+        "icon":"bi bi-box-arrow-up-right",
+        "link":"/Hello"
+    }
+]
