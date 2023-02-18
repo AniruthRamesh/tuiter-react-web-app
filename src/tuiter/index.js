@@ -1,5 +1,4 @@
 import { useLocation } from "react-router"
-import Nav from "../nav"
 import ExploreComponent from "./ExploreComponent/ExploreComponent"
 import NavigationSideBar from "./NavigationSideBar"
 import Tuits from "./Tuits"
