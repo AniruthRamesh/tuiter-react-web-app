@@ -52,7 +52,7 @@ const ExploreComponent = ()=>{
             <img
             src="./Images/relativity.jpg"
             className="img-fluid"
-            alt="Your Image"
+            alt="relativity"
             />
             <div className="container position-relative">
             <h1

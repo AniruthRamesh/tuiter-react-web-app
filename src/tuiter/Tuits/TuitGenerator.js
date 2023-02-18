@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const TuitGenerator = ({tuit})=>{
     const {avatar,
         userName,
@@ -19,7 +21,7 @@ const TuitGenerator = ({tuit})=>{
                 height: "45px",
                 borderRadius: "24px",
                 marginTop: "12px",
-                marginLeft: "16px"}} />
+                marginLeft: "16px"}} alt="empty"/>
                 <span className="fw-bold ms-1">{userName} </span>
                 {verified && <img
                     src={`./Images/${gold? `gold.png`:`instagram-verification-badge.png`}`}
@@ -46,7 +48,7 @@ const TuitGenerator = ({tuit})=>{
             borderTopRightRadius:"20px",
             borderTopLeftRadius:"20px",
             borderBottomLeftRadius: contentBelowPost ? "0" : "20px",
-            borderBottomRightRadius: contentBelowPost ? "0" : "20px"}}></img>
+            borderBottomRightRadius: contentBelowPost ? "0" : "20px"}} alt="empty"></img>
         }
         {contentBelowPost && 
         <div className="border" style={{
@@ -61,23 +63,23 @@ const TuitGenerator = ({tuit})=>{
         </div>}
 
             <div className="wd-adjusting-space d-flex justify-content-between mt-3 ms-4 me-4 mb-3">
-            <span><a href="#"
-            ><i class="bi bi-chat" style={{color: "grey"}}></i></a>
+            <span><Link to=""
+            ><i class="bi bi-chat" style={{color: "grey"}}></i></Link>
                 <span className="text-secondary fs-6"><p className="d-inline ms-2">{comments}</p></span>
                 </span>
 
-                <span><a href="#"
-                ><i class="bi bi-reply" style={{color: "grey"}}></i></a>
+                <span><Link to=""
+                ><i class="bi bi-reply" style={{color: "grey"}}></i></Link>
                 <span className="text-secondary fs-6"><p className="d-inline ms-2">{retweets}</p></span>
                 </span>
 
-                <span><a href="#"
-                ><i class="bi bi-heart-fill" style={{color: "red"}}></i></a>
+                <span><Link to=""
+                ><i class="bi bi-heart-fill" style={{color: "red"}}></i></Link>
                 <span className="text-secondary fs-6"><p className="d-inline ms-2">{likes}</p></span>
                 </span>
 
-                <span><a href="#"
-                ><i class="bi bi-upload" style={{color: "grey"}}></i></a>
+                <span><Link to=""
+                ><i class="bi bi-upload" style={{color: "grey"}}></i></Link>
                 </span>
             </div>
                 </div>

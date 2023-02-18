@@ -13,14 +13,14 @@ const PostSummaryItem = (
         }
     }
 )=>{
-    const {topic,userName,time,image,title,tweets,verified,gold} = postItem
+    const {topic,userName,time,title,tweets,verified,gold} = postItem
     return(
         <li className="list-group-item position-relative">
         <div className="d-inline position-relative float-end" id="wd-checkForJS">
-            <img src={`./Images/${postItem.image}`} style={{width:"100px", borderRadius: "1.2rem"}}/></div>
+            <img src={`./Images/${postItem.image}`} style={{width:"100px", borderRadius: "1.2rem"}} alt="empty"/></div>
             {topic && <span className="text-secondary">{topic}<br></br></span>}
             
-            {userName && <span className="fw-bold">{userName} {verified && <img src={`./Images/${gold?`gold.png`:`instagram-verification-badge.png`}`}
+            {userName && <span className="fw-bold">{userName} {verified && <img src={`./Images/${gold?`gold.png`:`instagram-verification-badge.png`}`} alt="empty"
         style={{
             width:"20px",
             marginLeft:"1px",
