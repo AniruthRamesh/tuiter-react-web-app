@@ -1,10 +1,16 @@
-import Nav from "../../nav"
+import Classes from "./classes";
+import ConditionalOutputs from "./conditional-output";
+import Styles from "./styles";
+import TodoList from "./todo/todo-list";
 
 const Assignment6 = ()=>{
     return(
         <div>
-            <Nav/>
             <h1>Assignment 6</h1>
+            <TodoList/>
+            <ConditionalOutputs/>
+            <Styles/>
+            <Classes/>
         </div>
     )
 }

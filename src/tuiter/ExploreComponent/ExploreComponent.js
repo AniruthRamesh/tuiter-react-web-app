@@ -50,7 +50,7 @@ const ExploreComponent = ()=>{
 
         <div className="position-relative mt-2">
             <img
-            src="./Images/relativity.jpg"
+            src="/Images/uncharted.jpg"
             className="img-fluid"
             alt="relativity"
             />
@@ -62,7 +62,7 @@ const ExploreComponent = ()=>{
                 bottom: "1.2rem",
                 paddingRight: "1.25rem"
                 }}>
-                Relativity Space
+                Uncharted wins best game
             </h1>
             </div>
         </div>

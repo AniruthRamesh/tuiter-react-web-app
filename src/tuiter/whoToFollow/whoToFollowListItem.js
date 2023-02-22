@@ -10,7 +10,7 @@ const WhoToFollowListItem = ({
     }
 })=>{
     return(
-        <div className="list-group-item position-relative">
+        <div className="list-group-item list-group-item-action position-relative">
     <span className="position-relative">
       <img src={`./Images/${follower.avatarIcon}`} style={{width: "45px", height: "45px", borderRadius:"20px"}} alt="empty" />
     </span>

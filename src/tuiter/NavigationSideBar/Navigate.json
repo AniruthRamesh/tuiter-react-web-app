@@ -34,7 +34,8 @@
     {
         "_id":7,
         "page":"Profile",
-        "icon":"bi bi-person-fill"
+        "icon":"bi bi-person-fill",
+        "link":"/tuiter/profile"
     },
     {
         "_id":8,

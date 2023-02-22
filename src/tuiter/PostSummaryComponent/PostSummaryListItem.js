@@ -15,7 +15,7 @@ const PostSummaryItem = (
 )=>{
     const {topic,userName,time,title,tweets,verified,gold} = postItem
     return(
-        <li className="list-group-item position-relative">
+        <div className="list-group-item list-group-item-action position-relative">
         <div className="d-inline position-relative float-end" id="wd-checkForJS">
             <img src={`./Images/${postItem.image}`} style={{width:"100px", borderRadius: "1.2rem"}} alt="empty"/></div>
             {topic && <span className="text-secondary">{topic}<br></br></span>}
@@ -31,7 +31,7 @@ const PostSummaryItem = (
           {title}<br></br>
         </div> }
         {tweets && <span className="text-secondary fw-normal">{tweets}</span>}   
-        </li>
+        </div>
     )
 }
 

@@ -1,19 +1,28 @@
+import TuitStats from "./TuitStats"
 import { Link } from "react-router-dom"
+import { useDispatch } from "react-redux"
+import { deleteTuit } from "./tuits-reducer"
+
 
 const TuitGenerator = ({tuit})=>{
-    const {avatar,
+    const {_id,avatar,
         userName,
         handle,
+        isTweetImage,
         tweetImage,
-        postImage,
         timings,
         comments,
         retweets,
-        likes,postContent,contentBelowPost,contentWebsite,actualContent,verified,gold,
+        likes,tuits,isContentBelowPost,contentWebsite,contentBelowPost,verified,gold,
     retweet,retweetBy} = tuit
+
+    const dispatch = useDispatch()
+    const handleDelete = ()=>{
+        dispatch(deleteTuit(_id))
+    }
+
     return(
         <div>
-            <div className="border-bottom mb-1">
                 {retweet && <div className="text-secondary fw-bold ms-5 mt-1"><i class="bi bi-reply-fill"></i>
                 {retweetBy} ReTweeted</div>}
                 <span>
@@ -21,8 +30,8 @@ const TuitGenerator = ({tuit})=>{
                 height: "45px",
                 borderRadius: "24px",
                 marginTop: "12px",
-                marginLeft: "16px"}} alt="empty"/>
-                <span className="fw-bold ms-1">{userName} </span>
+                marginLeft: "3px"}} alt="empty"/>
+                <span className="fw-bold ms-3">{userName} </span>
                 {verified && <img
                     src={`./Images/${gold? `gold.png`:`instagram-verification-badge.png`}`}
                     alt=""
@@ -31,26 +40,26 @@ const TuitGenerator = ({tuit})=>{
                     }}/> }
                 <span className="text-secondary">{handle}</span>
                 <span className="text-secondary"> . {timings}</span>
-                <span className="text-secondary float-end fs-3 me-3">...</span>
+                <span className="text-secondary float-end fs-3 me-3"><Link to="" ><i className="bi bi-x" onClick={handleDelete} ></i></Link></span>
                 <br></br>
                 </span>
         <div style={{
             marginLeft: "68px",
-            marginTop: "-20px",
-            width:"80%"}}>{postContent}</div>
+            marginTop: "-18px",
+            width:"80%"}}>{tuits}</div>
 
         <div style={{
             width:"80%",
             marginLeft:"66px"}}>
-        {tweetImage && 
-        <img src={postImage} className="img-fluid mt-1"
+        {isTweetImage && 
+        <img src={tweetImage} className="img-fluid mt-1"
         style={{
             borderTopRightRadius:"20px",
             borderTopLeftRadius:"20px",
             borderBottomLeftRadius: contentBelowPost ? "0" : "20px",
             borderBottomRightRadius: contentBelowPost ? "0" : "20px"}} alt="empty"></img>
         }
-        {contentBelowPost && 
+        {isContentBelowPost && 
         <div className="border" style={{
             borderBottomLeftRadius:  "20px",
             borderBottomRightRadius:  "20px"}}>
@@ -59,31 +68,13 @@ const TuitGenerator = ({tuit})=>{
                 style={{color: "grey"}}></i></span>
             <span className="text-secondary fs-6">{contentWebsite}</span>
         </div>
-        <div className="ms-4 mb-2">{actualContent}</div>
+        <div className="ms-4 mb-2">{contentBelowPost}</div>
         </div>}
 
-            <div className="wd-adjusting-space d-flex justify-content-between mt-3 ms-4 me-4 mb-3">
-            <span><Link to=""
-            ><i class="bi bi-chat" style={{color: "grey"}}></i></Link>
-                <span className="text-secondary fs-6"><p className="d-inline ms-2">{comments}</p></span>
-                </span>
+        <div><TuitStats likes={likes} comments={comments} retweets={retweets} id={_id} /></div>
 
-                <span><Link to=""
-                ><i class="bi bi-reply" style={{color: "grey"}}></i></Link>
-                <span className="text-secondary fs-6"><p className="d-inline ms-2">{retweets}</p></span>
-                </span>
-
-                <span><Link to=""
-                ><i class="bi bi-heart-fill" style={{color: "red"}}></i></Link>
-                <span className="text-secondary fs-6"><p className="d-inline ms-2">{likes}</p></span>
-                </span>
-
-                <span><Link to=""
-                ><i class="bi bi-upload" style={{color: "grey"}}></i></Link>
-                </span>
-            </div>
+            
                 </div>
-            </div>
         </div>
     )
 }

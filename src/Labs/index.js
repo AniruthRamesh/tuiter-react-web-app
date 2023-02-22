@@ -1,17 +1,18 @@
+import { Route,Routes} from "react-router";
 import Assignment6 from "./a6";
-import Classes from "./a6/classes";
-import ConditionalOutputs from "./a6/conditional-output";
-import Styles from "./a6/styles";
-import TodoList from "./a6/todo/todo-list";
+import Assignment7 from "./a7";
+import Nav from "../nav";
 
 const Labs = ()=>{
     return(
         <div>
-        <Assignment6/>
-        <TodoList/>
-        <ConditionalOutputs/>
-        <Styles/>
-        <Classes/>
+            <Nav/>
+        <Routes>
+            <Route index element={<Assignment6/>}></Route>
+            <Route path="a7" element={<Assignment7/>}></Route>
+        </Routes>
+
+        
     </div>
     );
 }
