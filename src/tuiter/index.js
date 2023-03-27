@@ -17,7 +17,7 @@ const store = configureStore(
     {
         reducer:{who:whoReducer,
                 post:postSummaryReducer,
-                tuits:tuitsReducer,
+                tuitsData:tuitsReducer,
                 profile:profileReducer
         }
     }
@@ -48,7 +48,6 @@ const Tuiter = ()=> {
                     <WhoToFollow/>
                 </div>
             </div>
-    
         </div>
         </Provider>
         

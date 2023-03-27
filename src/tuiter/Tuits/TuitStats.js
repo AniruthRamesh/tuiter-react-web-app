@@ -1,25 +1,57 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { likeReducer,unlikeReducer } from "./tuits-reducer"
+import { updateTuitThunk } from "../../services/tuits-thunks"
 
 
-const TuitStats = ({id,likes,comments,retweets})=>{
+const TuitStats = ({tuit,id,likes,comments,retweets,liked})=>{
     const dispatch = useDispatch()
 
 
-    const [like,setLike] = useState(false)
+    const [like,setLike] = useState(liked)
+    const [dislike,setDisLike] = useState(tuit.disliked)
 
     const handleLikeClick = ()=>{
         const toggle = !like
         setLike(toggle)
 
         if(!like){
-            dispatch(likeReducer(id))
+            console.log("calling update")
+            dispatch(updateTuitThunk({
+                ...tuit,
+                likes: likes + 1
+              }))
+         
         }
 
         if(like){
-            dispatch(unlikeReducer(id))
+            dispatch(updateTuitThunk({
+                ...tuit,
+                likes: likes - 1
+              }))
+        }
+    }
+
+
+    const handleDisLikeClick = ()=>{
+        const toggle = !dislike
+        setDisLike(toggle)
+
+        if(!dislike){
+            console.log("calling update")
+            dispatch(updateTuitThunk({
+                ...tuit,
+                dislikes: tuit.dislikes + 1,
+                
+              }))
+         
+        }
+
+        if(dislike){
+            dispatch(updateTuitThunk({
+                ...tuit,
+                dislikes: tuit.dislikes - 1
+              }))
         }
     }
 
@@ -40,6 +72,13 @@ const TuitStats = ({id,likes,comments,retweets})=>{
                 onClick={handleLikeClick}></i></Link>
                 <span className="text-secondary fs-6"><p className="d-inline ms-2">{likes}</p></span>
                 </span></div>
+
+            <div className="col"><span><Link to=""
+                ><i className={!dislike? "bi bi-hand-thumbs-down" : "bi bi-hand-thumbs-down-fill"} style={{color: dislike? "red":"gray"}} 
+                onClick={handleDisLikeClick}></i></Link>
+                <span className="text-secondary fs-6"><p className="d-inline ms-2">{tuit.dislikes}</p></span>
+                </span></div>
+
             <div className="col"><span><Link to=""
                 ><i className="bi bi-upload" style={{color: "grey"}}></i></Link>
                 </span></div>

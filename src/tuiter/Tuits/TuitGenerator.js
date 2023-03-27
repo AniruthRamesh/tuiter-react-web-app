@@ -1,7 +1,7 @@
 import TuitStats from "./TuitStats"
 import { Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
-import { deleteTuit } from "./tuits-reducer"
+import {deleteTuitThunk} from "../../services/tuits-thunks";
 
 
 const TuitGenerator = ({tuit})=>{
@@ -14,11 +14,11 @@ const TuitGenerator = ({tuit})=>{
         comments,
         retweets,
         likes,tuits,isContentBelowPost,contentWebsite,contentBelowPost,verified,gold,
-    retweet,retweetBy} = tuit
+    retweet,retweetBy,liked} = tuit
 
     const dispatch = useDispatch()
     const handleDelete = ()=>{
-        dispatch(deleteTuit(_id))
+        dispatch(deleteTuitThunk(_id))
     }
 
     return(
@@ -71,7 +71,7 @@ const TuitGenerator = ({tuit})=>{
         <div className="ms-4 mb-2">{contentBelowPost}</div>
         </div>}
 
-        <div><TuitStats likes={likes} comments={comments} retweets={retweets} id={_id} /></div>
+        <div><TuitStats tuit={tuit} likes={likes} comments={comments} retweets={retweets} id={_id} liked={liked} /></div>
 
             
                 </div>

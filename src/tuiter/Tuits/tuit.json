@@ -15,7 +15,8 @@
         "verified":true,
         "gold":true,
         "retweet":false,
-        "retweetBy":""
+        "retweetBy":"",
+        "liked":false
         
     },
     {
@@ -36,7 +37,8 @@
         "verified":true,
         "gold":false,
         "retweet":false,
-        "retweetBy":""
+        "retweetBy":"",
+        "liked":false
     },
 
     {
@@ -55,7 +57,8 @@
         "verified":true,
         "gold":true,
         "retweet":true,
-        "retweetBy":"Tristan Tate"
+        "retweetBy":"Tristan Tate",
+        "liked":false
         
     }
 ]
