@@ -1,8 +1,0 @@
-input[type="text"]{
-    text-indent: 45px;
-}
-
-input[type="text"]::placeholder{
-    position: absolute;
-    margin-left: 2px;
-}
