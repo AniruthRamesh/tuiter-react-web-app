@@ -1,0 +1,164 @@
+*{
+    background-color: black;
+}
+
+.wd-main-container{
+    position: relative;
+    width: 600px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(47,51,54);
+    margin-left: 420px;
+}
+
+.wd-bookmarks{
+    margin-left:16px;
+    margin-top: 12px;
+}
+
+.wd-dots-in-bookmars{
+    position: absolute;
+    color: dodgerblue;
+    font-size: xx-large;
+    right:0px;
+    top:-20px;
+    margin-right: 18px;
+}
+
+.wd-bookmarks-in-bold{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.wd-bookmarks-username{
+    color: grey;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: -17px;
+}
+
+.wd-border{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(47,51,54);
+}
+
+#wd-neoMatrix{
+    width: 45px;
+    height: 45px;
+    border-radius: 24px;
+    margin-top: 12px;
+    margin-left: 16px;
+}
+
+.wd-username{
+    position: relative;
+    margin-left: 70px;
+    font-size: 15px;
+    margin-top: -48px;
+    color: white;
+    font-weight: bold;
+}
+
+.wd-userid-date{
+    position: absolute;
+    color: lightgray;
+    font-size: 15px;
+    margin-left: 155px;
+    margin-top: -18px;
+}
+
+.wd-text{
+    width: 506px;
+    margin-left: 70px;
+    margin-top: -12px;
+}
+
+.wd-text-paragraph{
+    font-size: 15px;
+    color: white;
+}
+
+.wd-dots-in-text{
+    position: absolute;
+    right: 38px;
+    height:1px;
+    width: 1px;
+    top: 50px;
+    color: grey;
+    font-size: x-large;
+}
+
+#wd-smith{
+    width: 506px;
+    height: 264px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border: 1px solid rgb(47,51,54);
+    margin-left: 66px;
+    margin-bottom: 0px;
+}
+
+.wd-post-below-image{
+    border: 1px solid rgb(47,51,54);
+    width: 506px;
+    margin-top: -4px;
+    margin-left: 66px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.wd-post-white-text{
+    margin: 0px;
+    color: white;
+    font-size: 15px;
+    padding: 12px;
+    padding-bottom: 5px;
+}
+
+.wd-post-grey-text{
+    margin: 0px;
+    color: grey;
+    font-size: 12px;
+    padding: 12px;
+    padding-top: 0px;
+}
+
+.wd-icon-link{
+    margin-left: 40px;
+}
+
+.wd-proof.com{
+    color: white;
+}
+
+.wd-icons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 110px;
+}
+
+.wd-post-numbers{
+    color: grey;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.wd-post-aligning1{
+    margin-left: 105px;
+    margin-top: -17px;
+}
+
+.wd-post-aligning2{
+    margin-left: 236px;
+    margin-top: -25px;
+}
+
+.wd-post-aligning3{
+    margin-left: 365px;
+    margin-top: -26px;
+    color: red;
+}
