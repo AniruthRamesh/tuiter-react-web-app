@@ -18,7 +18,8 @@ const Tuits = ()=>{
             {loading && <i class="bi bi-arrow-clockwise"></i>}
             { !loading &&
                 <div className="position-relative border border-top-0 list-group">
-                {tuits.map(tuits=>{
+                    
+                {tuits&& tuits.map(tuits=>{
                     return(
                         <div className="list-group-item list-group-item-action">
                             <TuitGenerator tuit={tuits}/>
