@@ -5,7 +5,7 @@ import {deleteTuitThunk} from "../../services/tuits-thunks";
 
 
 const TuitGenerator = ({tuit})=>{
-    const {_id,avatar,
+    const {id,avatar,
         userName,
         handle,
         isTweetImage,
@@ -18,7 +18,7 @@ const TuitGenerator = ({tuit})=>{
 
     const dispatch = useDispatch()
     const handleDelete = ()=>{
-        dispatch(deleteTuitThunk(_id))
+        dispatch(deleteTuitThunk(id))
     }
 
     return(
@@ -71,7 +71,7 @@ const TuitGenerator = ({tuit})=>{
         <div className="ms-4 mb-2">{contentBelowPost}</div>
         </div>}
 
-        <div><TuitStats tuit={tuit} likes={likes} comments={comments} retweets={retweets} id={_id} liked={liked} /></div>
+        <div><TuitStats tuit={tuit} likes={likes} comments={comments} retweets={retweets} id={id} liked={liked} /></div>
 
             
                 </div>
